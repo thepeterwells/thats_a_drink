@@ -1,3 +1,4 @@
+import 'package:drinking_games/utils/ColorUtil.dart';
 import 'package:drinking_games/view/home.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,11 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'That\'s a Drink',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: HexColor("#494747"),
+        primaryColor: HexColor("#494747"),
+        primaryColorLight: HexColor("#747272"),
+        primaryColorDark: HexColor("#222020"),
+        accentColor: HexColor("#b6bc94"),
       ),
       home: HomeScreen(),
     );

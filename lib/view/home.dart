@@ -1,3 +1,4 @@
+import 'package:drinking_games/utils/ColorUtil.dart';
 import 'package:drinking_games/view/placeholder/PlaceHolderWidget.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +10,6 @@ class HomeScreen extends StatefulWidget {
     return _HomeScreenState();
   }
   
-  
 }
 
 class _HomeScreenState extends State<HomeScreen> {
@@ -17,8 +17,8 @@ class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
   final List<Widget> _children = [
     PlaceholderWidget(Colors.white),
-    PlaceholderWidget(Colors.green.shade100),
-    PlaceholderWidget(Colors.blue.shade100)
+    PlaceholderWidget(Colors.green.shade200),
+    PlaceholderWidget(Colors.blue.shade200)
   ];
   
   @override
@@ -27,6 +27,9 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(title: Text('That\'s a Drink'),),
       body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: AppTheme.primaryColor,
+        selectedItemColor: AppTheme.secondaryColor,
+        unselectedItemColor: AppTheme.primaryTextColor,
         onTap: onTabTapped,
         currentIndex: _currentIndex,
         items: [
