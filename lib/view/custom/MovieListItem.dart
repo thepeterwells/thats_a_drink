@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class MovieListItem extends ListTile {
   MovieListItem(Movie movie, MovieListPresenter presenter) :
       super(
-        title: Text('Moulin Rouge!'),
-        subtitle: Text('Literally the best musical of all time.'),
+        title: Text(movie.originalTitle),
+        subtitle: Text(movie.releaseDate),
       );
 }

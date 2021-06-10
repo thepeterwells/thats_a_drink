@@ -42,7 +42,7 @@ class MovieListState extends State<MovieListWidget> implements IMovieList {
     setState(() {
       _isLoading = true;
     });
-    WidgetsBinding.instance?.addPostFrameCallback((_) => presenter.start(this));
+    WidgetsBinding.instance!.addPostFrameCallback((_) => presenter.start(this));
   }
 
   @override
