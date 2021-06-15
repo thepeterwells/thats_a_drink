@@ -66,14 +66,11 @@ class MovieListState extends State<MovieListWidget> implements IMovieList {
 
   @override
   void setDataItems(List<Movie> movies) {
-    _listView = ListView.separated(
-        itemBuilder: (context, index) {
-          return MovieListItem(movies[index], presenter);
-        },
-        separatorBuilder: (context, index) {
-          return Divider();
-        },
-        itemCount: movies.length
+    _listView = ListView.builder(
+      itemBuilder: (context, index) {
+        return MovieListItem(movies[index], presenter);
+      },
+      itemCount: movies.length,
     );
   }
 
