@@ -15,6 +15,7 @@ class MovieListScreen extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: AppTheme.primaryDarkColor,
         body: MovieListWidget(presenter: presenter),
       ),
     );
@@ -67,6 +68,7 @@ class MovieListState extends State<MovieListWidget> implements IMovieList {
   @override
   void setDataItems(List<Movie> movies) {
     _listView = ListView.builder(
+      padding: EdgeInsets.all(8.0),
       itemBuilder: (context, index) {
         return MovieListItem(movies[index], presenter);
       },

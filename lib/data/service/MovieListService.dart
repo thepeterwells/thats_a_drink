@@ -27,7 +27,8 @@ class LiveMovieListService implements MovieListService{
     return movieList.map((movie) => Movie(
       id: movie['id'],
       originalTitle: movie['original_title'],
-      releaseDate: movie['release_date']
+      releaseDate: movie['release_date'],
+      posterPath: movie['poster_path']
     )).toList();
   }
 }
